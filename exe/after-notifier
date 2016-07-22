@@ -1,0 +1,34 @@
+#!/usr/bin/env ruby
+
+if $0 == __FILE__
+  $:.unshift File.expand_path('../../lib', __FILE__)
+end
+
+############ TODO: 以下は消す
+require 'pry'
+require 'pry-doc'
+require 'awesome_print'
+############
+
+require 'after_notifier'
+
+# Runクラス
+#
+# オプションをパースする(OptionParserクラス)
+# -p 必須
+# その他は terminal-notifier と同じ
+#
+# 実際にプロセスの終了を監視する
+# PidGuard
+
+# 自分をちょくで叩いた場合
+# https://github.com/mojombo/god/blob/92c06aa5f6293cf26498a306e9bb7ac856d7dca0/lib/god/system/process.rb#L1
+
+# binding.pry
+# exec TerminalNotifier::BIN_PATH, '-message', 'hello', '-title', 'hoge'
+# `#{TerminalNotifier::BIN_PATH} -message hello -title hoge`
+
+AfterNotifier.run(ARGV)
+
+# -p はそのまま残っているが特に影響ないのでそのまま残しておく
+# exec TerminalNotifier::BIN_PATH, *ARGV
