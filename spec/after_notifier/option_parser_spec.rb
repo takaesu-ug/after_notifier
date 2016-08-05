@@ -9,13 +9,13 @@ describe AfterNotifier::OptionParser do
       }.to raise_error AfterNotifier::OptionParseError
     end
 
-    it 'unset -message option then absolutely set -message option' do
+    it 'Unset -message option then absolutely set -message option' do
       argv = %w(234 -title hoge)
       parser = AfterNotifier::OptionParser.new(argv)
       expect(parser.terminal_notifier_options).to eq %w(-title hoge -message AFTER_NOTIFIER)
     end
 
-    it 'has a attriibute' do 
+    it 'Has a attriibute' do 
       argv = %w(234 -message hoge)
       parser = AfterNotifier::OptionParser.new(argv)
 

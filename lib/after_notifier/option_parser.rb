@@ -19,6 +19,7 @@ module AfterNotifier
     end
 
     def valid_pid?
+      # PID is number above 0.
       @pid.to_i > 0
     end
   end
