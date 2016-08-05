@@ -1,5 +1,10 @@
 # AfterNotifier
 
+## Overview
+
+Notirication with [terminal-notifier](https://github.com/julienXX/terminal-notifier) after running process of busy and slow.  
+Required Mac OSX 10.8 and higher(Detail: https://github.com/julienXX/terminal-notifier)
+
 ## Installation
 
 ```
@@ -8,9 +13,16 @@ $ gem install after_notifier
 
 ## Usage
 
-TODO: Write usage instructions here
+When busy and slow process id is 11111.
 
-[Macのターミナルで時間のかかるコマンドが終わったら通知を受け取る方法 - Qiita](http://qiita.com/endam/items/6b2dd23ac7a6a85f7f18)
+```
+$ after-notifier PID [terminal-notifier options]
+
+ex)
+$ after-notifier 11111 -message "busy proccess finished"
+```
+
+You can use [terminal-notifier options](https://github.com/julienXX/terminal-notifier#options).
 
 ## Development
 
@@ -20,10 +32,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/after_notifier. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yusabana/after_notifier. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
